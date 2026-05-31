@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kornega Alliance Development Group</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px 10%;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#d4af37;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#f8f8f8;
+    padding:25px;
+    border-radius:10px;
+}
+
+.contact{
+    background:#0f172a;
+    color:white;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    background:#d4af37;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<!-- =========================
+EDIT INFORMATION BELOW ONLY
+========================= -->
+
+<script>
+const company = {
+    name: "Kornega Alliance Development Group",
+    slogan: "Building Wealth Through Strategic Real Estate Investments",
+    description: "We acquire, develop, and manage high-value real estate opportunities for investors and communities.",
+    phone: "(555) 123-4567",
+    email: "info@kornegaalliance.com",
+    address: "Your Business Address Here"
+};
+</script>
+
+<header>
+    <nav>
+        <div class="logo" id="companyName"></div>
+        <div>
+            <a href="#about" style="color:white;margin-right:15px;">About</a>
+            <a href="#services" style="color:white;margin-right:15px;">Services</a>
+            <a href="#contact" style="color:white;">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 id="heroTitle"></h1>
+    <p id="heroDescription"></p>
+    <a href="#contact" class="btn">Get Started</a>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p id="aboutText"></p>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Real Estate Investment</h3>
+            <p>Residential, commercial, and multifamily opportunities.</p>
+        </div>
+
+        <div class="card">
+            <h3>Property Development</h3>
+            <p>Ground-up construction and redevelopment projects.</p>
+        </div>
+
+        <div class="card">
+            <h3>Asset Management</h3>
+            <p>Portfolio management and investor reporting.</p>
+        </div>
+
+        <div class="card">
+            <h3>Strategic Partnerships</h3>
+            <p>Joint ventures and development alliances.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Address:</strong> <span id="address"></span></p>
+
+    <br>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Tell us about your investment goals"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p id="footerText"></p>
+</footer>
+
+<script>
+document.getElementById("companyName").textContent = company.name;
+document.getElementById("heroTitle").textContent = company.slogan;
+document.getElementById("heroDescription").textContent = company.description;
+document.getElementById("aboutText").textContent = company.description;
+document.getElementById("phone").textContent = company.phone;
+document.getElementById("email").textContent = company.email;
+document.getElementById("address").textContent = company.address;
+document.getElementById("footerText").textContent =
+    "© 2026 " + company.name + ". All Rights Reserved.";
+</script>
+
+</body>
+</html>
